@@ -1,6 +1,13 @@
 <script src="<%- config.root %>js/jquery-2.1.0.min.js"></script>
 <script type="text/javascript">
 $(document).ready(function(){ 
+   console.log("执行调用prettify  start");
+  $('pre').addClass('prettyprint linenums').attr('style', 'overflow:auto;');
+   prettyPrint();
+   console.log("执行调用prettify  end");
+changeFond();
+changeCouleur();
+
   $('.navbar').click(function(){
     $('header nav').toggleClass('shownav');
   });
@@ -165,3 +172,4 @@ $(document).ready(function(){
 
 <%- partial('baidu_analytics') %>
 <%- partial('google_analytics') %>
+<%- partial('canvas_nest') %>
